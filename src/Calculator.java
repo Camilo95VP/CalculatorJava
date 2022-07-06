@@ -4,8 +4,9 @@ public class Calculator {
     public static void main(String[] args) {
         boolean estado;
         do {
-            System.out.println("OPERACIONES :\n 1.Sumar\n 2.restar");
+            System.out.println("OPERACIONES :\n 1.Sumar\n 2.Restar\n 3.Multiplicar\n 4.Dividir\n 5.Modulo\n 6.Salir");
             Scanner leerOpcion = new Scanner(System.in);
+            System.out.println("Digite la opcion: ");
             int opcion = leerOpcion.nextInt();
             estado = true;
 
@@ -19,7 +20,7 @@ public class Calculator {
                     System.out.println("Seleccionaste restar");
                     break;
 
-                case 3:
+                case 6:
                     estado = false;
             }
 
