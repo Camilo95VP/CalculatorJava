@@ -2,7 +2,10 @@ import java.util.Scanner;
 
 public class Calculator {
     public static void main(String[] args) {
+
         boolean estado;
+        double n1=0;
+        double n2=0;
         do {
             System.out.println("OPERACIONES :\n 1.Sumar\n 2.Restar\n 3.Multiplicar\n 4.Dividir\n 5.Modulo\n 6.Salir");
             Scanner leerOpcion = new Scanner(System.in);
@@ -14,46 +17,64 @@ public class Calculator {
             switch (opcion) {
 
                 case 1:
+
                     System.out.println("Digite el primer numero: ");
-                    int n1 = leerNumeros.nextInt();
+                    n1 = leerNumeros.nextDouble();
                     System.out.println("Digite el segundo numero: ");
-                    int n2 = leerNumeros.nextInt();
-                    int resultadoSuma = n1 + n2;
+                    n2 = leerNumeros.nextDouble();
+                    double resultadoSuma = n1 + n2;
                     System.out.println(n1 + " + " + n2 + " = " + resultadoSuma);
                     break;
 
                 case 2:
+
                     System.out.println("Digite el primer numero: ");
-                    int n3 = leerNumeros.nextInt();
+                    n1= leerNumeros.nextDouble();
                     System.out.println("Digite el segundo numero: ");
-                    int n4 = leerNumeros.nextInt();
-                    int resultadoResta = n3 - n4;
-                    System.out.println(n3 + " - " + n4 + " = " + resultadoResta);
+                    n2 = leerNumeros.nextDouble();
+                    double resultadoResta = n1 - n2;
+                    System.out.println(n1 + " - " + n2 + " = " + resultadoResta);
                     break;
 
                 case 3:
+
                     System.out.println("Digite el primer numero: ");
-                    int n5 = leerNumeros.nextInt();
+                    n1 = leerNumeros.nextDouble();
                     System.out.println("Digite el segundo numero: ");
-                    int n6 = leerNumeros.nextInt();
-                    int resultadoMulti = n5 * n6;
-                    System.out.println(n5 + " * " + n6 + " = " + resultadoMulti);
+                    n2 = leerNumeros.nextDouble();
+                    double resultadoMulti = n1 * n2;
+                    System.out.println(n1 + " * " + n2 + " = " + resultadoMulti);
                     break;
 
                 case 4:
 
-                    System.out.println("Digite el primer numero: ");
-                    double n7 = leerNumeros.nextDouble();
-                    double n8 = 0;
-                    if (n7 == 0) {
+                    System.out.println("Digite el numerador: ");
+
+                    n1 = leerNumeros.nextDouble();
+                    System.out.println("Digite el divisor: ");
+                    n2= leerNumeros.nextDouble();
+
+                    if (n2 == 0) {
                         System.out.println("No se puede dividir entre 0");
-                    } else {
-                        System.out.println("Digite el segundo numero: ");
-                        n8 = leerNumeros.nextDouble();
+                        break;
                     }
 
-                    double resultadoDiv = n7 / n8;
-                    System.out.println(n7 + " / " + n8 + " = " + resultadoDiv);
+                    double resultadoDiv = n1 / n2;
+                    System.out.println(n1 + " / " + n2 + " = " + resultadoDiv);
+                    break;
+
+                case 5:
+                    System.out.println("Digite el primer numero: ");
+                    n1 = leerNumeros.nextDouble();
+                    System.out.println("Digite el segundo numero: ");
+                    n2 = leerNumeros.nextDouble();
+                    if (n2 == 0) {
+                        System.out.println("El divisor no debe ser 0");
+                        break;
+                    }
+
+                    double resultadoModulo=n1%n2;
+                    System.out.println(n1 + " % " + n2 + " = " + resultadoModulo);
                     break;
 
                 case 6:
